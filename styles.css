@@ -1,0 +1,208 @@
+/* Global resets */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main container splits the page into two columns */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+/* Left column for settings */
+.controls {
+    width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.controls h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.controls h3 {
+    margin: 16px 0 8px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Section titles */
+.section-title {
+    margin: 0 0 4px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Form input styles*/
+.input-group {
+    margin-bottom: 8px;
+}
+
+/* Edge size inputs in a row */
+.edge-size-group, .temperature-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.help-text {
+    margin: 4px 0 12px 0;
+    padding: 0 4px;
+}
+
+.help-text small {
+    display: block;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.input-group.compact {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.input-group.compact input {
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.input-group.compact label {
+    font-size: 12px;
+}
+
+.input-group.compact small {
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #66afe9;
+}
+
+.input-group small {
+    display: block;
+    margin-top: 3px;
+    color: #888;
+    font-size: 10px;
+}
+
+/* Style the buttons */
+#initButton, #startButton, #stopButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+/* Add extra bottom margin only to the initialize button since it's separate */
+#initButton {
+    background-color: #4285F4;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    background-color: #0b7702;
+    margin-bottom: 5px;  /* Reduced space between start and stop */
+}
+
+#stopButton {
+    background-color: #c62828;
+}
+
+#initButton:hover {
+    background-color: #357ae8;
+}
+
+#startButton:hover {
+    background-color: #0d904b;
+}
+
+#stopButton:hover {
+    background-color: #b71c1c;
+}
+
+/* Right column for simulations */
+.simulations {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Simulation containers with reduced height */
+.simulation-container {
+    flex: none;
+    width: 500px;
+    height: 250px;
+    border: 1px solid #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Let CSS control the canvas size */
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Grid type labels */
+.grid-label {
+    position: absolute;
+    right: -120px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.8;
+} 
