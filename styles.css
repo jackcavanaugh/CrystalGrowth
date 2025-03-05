@@ -205,4 +205,11 @@ button:hover {
 
 button:active {
     opacity: 0.8;
+}
+
+/* Header icon styling */
+.h2-icon {
+    height: 1.2em;
+    width: auto;
+    vertical-align: top;
 } 
