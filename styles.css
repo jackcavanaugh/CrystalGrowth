@@ -209,7 +209,8 @@ button:active {
 
 /* Header icon styling */
 .h2-icon {
-    height: 1.2em;
-    width: auto;
-    vertical-align: top;
+    height: 1.1em;
+    width: 1.1em;
+    vertical-align: middle;
+    object-fit: contain;
 } 
